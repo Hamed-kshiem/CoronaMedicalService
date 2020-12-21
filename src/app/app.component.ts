@@ -8,14 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'CoronaMedicalService';
-  allStaff: Staff[] = [];
-
-  constructor(private staff: StaffService) {}
-  ngOnInit(): void {
-    this.staff.getAllStaff().subscribe((res) => {
-      this.allStaff = res;
-      console.log(res);
-    });
-  }
+  constructor() {}
+  ngOnInit(): void {}
 }
