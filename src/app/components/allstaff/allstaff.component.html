@@ -1,20 +1,20 @@
-<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark" style="margin-top: 0px;">
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark card-shadow" style="margin-top: 0px;">
   <div class="col-md-6 px-0">
-    <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+    <h1 class="display-4 font-italic">Corona Medical Service</h1>
     <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
     <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
   </div>
   <div class="row">
     <div class="col-xs-12">
         <div class="text-right">
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Add Staff</button>
 </div>
 </div>
 </div>
 </div>
 <div class="row" style="margin-bottom: 20px;">
   <div id="demo" class="collapse" >
-    <div class="card" >
+    <div class="card card-shadow" >
      
       <div class="card-body">
         <form class="needs-validation" >
@@ -83,7 +83,7 @@
     </div>
   </div>
 </div>
-<table class="table table-responsive table-bordered table-hover">
+<table class="table table-responsive table-bordered table-hover card-shadow">
   <thead class="table-light">
     <tr>
       <th class="text-center" scope="col">#id</th>
@@ -118,7 +118,7 @@
       <td class="text-center">
         <div class="btn-group" role="group" aria-label="Basic example">
           <button type="button" class="btn btn-primary" (click)="viewStaff( staff.id )">View</button>
-          <button type="button" class="btn btn-info" (click)="editStaff( staff.id )" data-toggle="modal" data-target="#editModal">Edit</button>
+          <button type="button" class="btn btn-secondary" (click)="editStaff( staff.id )" data-toggle="modal" data-target="#editModal">Edit</button>
           <button type="button" class="btn btn-danger" (click)="deleteStaff( staff.id )" data-toggle="modal" data-target="#deleteModal">delete</button>
         </div>
       </td>
