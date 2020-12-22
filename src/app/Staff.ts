@@ -9,14 +9,14 @@ export interface Education {
 }
 
 export interface Staff {
-  id: number;
-  name: string;
-  birthday: Date;
-  street: string;
-  postcode: number;
-  location: string;
-  coronaPositiv: boolean;
-  hiringDate: Date;
-  type: Type[];
-  education: Education[];
+  id?: number;
+  name?: string;
+  birthday?: Date;
+  street?: string;
+  postcode?: number;
+  location?: string;
+  coronaPositiv?: boolean;
+  hiringDate?: Date;
+  type?: Type[];
+  education?: Education[];
 }

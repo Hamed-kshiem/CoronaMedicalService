@@ -11,6 +11,7 @@ import { MaincomponentComponent } from './components/maincomponent/maincomponent
 import { LoginComponent } from './components/login/login.component';
 import { NotFound404Component } from './components/not-found404/not-found404.component';
 import { EditStaffComponent } from './components/edit-staff/edit-staff.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { EditStaffComponent } from './components/edit-staff/edit-staff.component
     NotFound404Component,
     EditStaffComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
