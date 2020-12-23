@@ -1,1 +1,129 @@
-<p>single-staff-view works!</p>
+<div class="container emp-profile">
+  <form method="">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-img">
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          <div class="file btn btn-lg btn-primary">
+            {{ staffObj.id }}
+            <input type="file" name="file" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-head">
+          <h5>
+            {{ staffObj.name }}
+          </h5>
+          <h6></h6>
+          <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="home-tab"
+                data-toggle="tab"
+                href="#home"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+                >Education</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="profile-tab"
+                data-toggle="tab"
+                href="#profile"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+                >Staff Type</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <input
+          type="submit"
+          class="profile-edit-btn"
+          name="btnAddMore"
+          value="Back to Home"
+          [routerLink]="['/']"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-work">
+          <p>Personal info</p>
+          <a href="">ID: {{ staffObj.id }}</a
+          ><br />
+          <a href="">Name :{{ staffObj.name }}</a
+          ><br />
+          <a href="">Birthday: {{ staffObj.birthday | date }}</a
+          ><br />
+          <a href="">Hiring Date :{{ staffObj.hiringDate | date }}</a
+          ><br />
+          <a href=""
+            >Corona: {{ staffObj.coronaPositiv ? "Positiv" : "Negativ" }}</a
+          >
+          <p>Adress</p>
+          <a href="">{{ staffObj.street }}</a
+          ><br />
+          <a href="">{{ staffObj.location }}</a
+          ><br />
+          <a href="">{{ staffObj.postcode }}</a
+          ><br />
+          <a href=""></a><br />
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="tab-content profile-tab" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <div *ngIf="staffObj.education.length == 0; then content">
+              here is ignored
+            </div>
+            <ng-template #content
+              ><div class="alert alert-warning" role="alert">
+                no education input found
+              </div></ng-template
+            >
+            <ul>
+              <li *ngFor="let item of staffObj.education">
+                {{ item.education | titlecase }}
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+          <div *ngIf="staffObj.type.length == 0; then content2">
+            here is ignored
+          </div>
+          <ng-template #content2
+            ><div class="alert alert-warning" role="alert">
+              no Staff types input found
+            </div></ng-template
+          >
+            <ul>
+              <li *ngFor="let item of staffObj.type">
+                {{ item.typename | titlecase }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
