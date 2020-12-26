@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Staff } from 'src/app/Staff';
 import { StaffService } from '../../staff.service';
 import { NgModule } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-allstaff',
@@ -37,7 +38,11 @@ export class AllstaffComponent implements OnInit {
     education: [],
   };
 
-  constructor(private staff: StaffService, private router: Router) {}
+  constructor(
+    private staff: StaffService,
+    private router: Router,
+    private fb: FormBuilder
+  ) {}
   ngOnInit(): void {
     this.staff.getAllStaff().subscribe((res) => {
       this.allStaff = res;

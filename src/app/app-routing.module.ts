@@ -7,12 +7,14 @@ import { MaincomponentComponent } from './components/maincomponent/maincomponent
 import { DeleteStaffComponent } from './components/delete-staff/delete-staff.component';
 import { EditStaffComponent } from './components/edit-staff/edit-staff.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
 
     component: MaincomponentComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: '', component: AllstaffComponent },
       { path: 'editstaff/:id', component: EditStaffComponent },

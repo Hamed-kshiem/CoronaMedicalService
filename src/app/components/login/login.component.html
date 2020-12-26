@@ -1,15 +1,15 @@
 <div class="login">
-<main class="form-signin">
-    <form action="/">
+<main class="form-signin" >
+    <form action="/" [formGroup]="signinForm" (ngSubmit)="loginUser()">
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
       <label for="inputEmail" class="visually-hidden">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="username"  required autofocus>
       <label for="inputPassword" class="visually-hidden">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password" required>
       <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
+        <div *ngIf="wrongpassword" class="alert alert-danger alert-dismissible fade show">
+          <strong>Error!</strong> A problem has been occurred while submitting your data.
+      </div>
       </div>
       <button class="w-100 btn btn-lg btn-primary" type="submit" value="/"  >Sign in</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
