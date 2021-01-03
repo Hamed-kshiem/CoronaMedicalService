@@ -1,3 +1,4 @@
+import { User } from 'src/app/user';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
@@ -9,7 +10,6 @@ import {
   HttpErrorResponse,
 } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { User } from 'src/app/user';
 
 @Injectable({
   providedIn: 'root',
