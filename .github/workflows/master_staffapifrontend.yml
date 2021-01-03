@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'staffapifrontend'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8bbc10f9b5424b67b4cf04756585ea0b }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b715f21c1fec4581a7d3a31beb8e0c3d }}
         package: .
