@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  API_URL: 'https://kvstaffapi.azurewebsites.net/api',
+  production: true,
+  API_URL: 'https://staffapise.azurewebsites.net/api',
 };
 
 /*
