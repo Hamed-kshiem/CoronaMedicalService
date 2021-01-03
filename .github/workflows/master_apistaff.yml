@@ -31,4 +31,4 @@ jobs:
           app-name: "apistaff"
           slot-name: "production"
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_ea638e545f9640e1b43c7f218e115342 }}
-          package: "./dist/CoronaMedicalService"
+          package: ./dist/CoronaMedicalService
