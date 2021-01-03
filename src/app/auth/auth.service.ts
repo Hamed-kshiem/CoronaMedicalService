@@ -9,7 +9,7 @@ import {
   HttpErrorResponse,
 } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { User } from './user';
+import { User } from 'src/app/user';
 
 @Injectable({
   providedIn: 'root',
